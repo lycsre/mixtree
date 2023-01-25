@@ -1,0 +1,149 @@
+body {
+    background-color: #dfd7d7;
+}
+
+header {
+    background-image: url("img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+}
+
+.node {
+    cursor: pointer;
+}
+
+.node circle {
+    fill: #fff;
+    stroke: black;
+    stroke-width: 3px;
+}
+
+.node text {
+    font: 12px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+}
+
+.hench-img {
+    max-width: 180px;
+    max-height: 80px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 35px;
+    position: absolute;
+}
+
+.hench-banner {
+    width: 250px;
+    height: 60px;
+    left: -35px;
+    bottom: -17px;
+}
+
+.hench-title {
+    top: 3px;
+    z-index: 0;
+    position: relative;
+    color: #2354ce;
+    font-size: 15px;
+}
+
+.mix-search {
+    left: calc(50% - 72px);
+    bottom: 20px;
+}
+
+.select-type:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+.step-header {
+    background-image: linear-gradient(270deg, rgba(209, 166, 56, 0.5) 26.8%, rgb(10, 201, 175, 0.8) 130.1%);
+    line-height: 48px;
+    font-size: 26px;
+    text-align: center;
+}
+
+.download-card {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    padding: 0px;
+    bottom: 30px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+
+#export-text {
+    background-image: url("../img/export.png");
+    opacity: 0.83;
+    background-size: cover;
+    top: 10%;
+    left: calc(3.5% + 10px);
+    width: calc(23% + 5px);
+    height: 80%;
+    cursor: pointer;
+}
+
+#expand {
+    top: 15px;
+    left: 30px;
+    width: 110px;
+}
+
+#collapse {
+    top: 15px;
+    left: 160px;
+    width: 110px;
+}
+
+#mixlevel-counter {
+    top: 60px;
+    left: 30px;
+    width: 270px;
+}
+
+#fomular-panel {
+    top: 15px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 124px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.modal {
+    opacity: 1;
+}
+
+.carousel .carousel-item img {
+    height: 600px;
+}
+
+circle:focus {
+    outline: none;
+}
