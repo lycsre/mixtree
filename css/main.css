@@ -78,16 +78,6 @@ header {
     float: right;
 }
 
-#btn-back-to-top {
-    position: fixed;
-    padding: 0px;
-    bottom: 30px;
-    right: 30px;
-    height: 50px;
-    width: 50px;
-    display: none;
-}
-
 #export-text {
     background-image: url("../img/export.png");
     opacity: 0.83;
