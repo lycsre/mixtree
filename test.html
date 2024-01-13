@@ -11,15 +11,12 @@
     <title>MixTree</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1789969836469589" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css"> -->
     <link rel="icon" href="img/mixtree.png">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script> -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PFZ3Z4KT2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -64,6 +61,13 @@
 <div w3-include-html="nav.html" class="mb-5"></div>
 <body>
     <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-danger text-center" role="alert">
+                    <h5 class="mb-0">Mobile version testing in progress ...</h5>
+                </div>
+            </div>
+        </div>
         <div class="row d-none d-lg-block">
             <div class="col">
                 <div class="card rounded border border-3">
@@ -118,7 +122,7 @@
                         <label class="input-group-text" for="henchTypeSelector">Type</label>
                         <select class="form-select" id="henchTypeSelector">
                             <option value="0" selected>Dragon</option>
-                            <option value="1" selected>Animal</option>
+                            <option value="1">Animal</option>
                             <option value="2">Insect</option>
                             <option value="3">Metal</option>
                             <option value="4">Mystery</option>
@@ -130,14 +134,6 @@
                     <div class="input-group mt-2">
                         <label class="input-group-text" for="henchNameSelector">Name</label>
                         <select class="form-select" id="henchNameSelector">
-                            <option value="0" selected>Dragon</option>
-                            <option value="1" selected>Animal</option>
-                            <option value="2">Insect</option>
-                            <option value="3">Metal</option>
-                            <option value="4">Mystery</option>
-                            <option value="5">Devil</option>
-                            <option value="6">Bird</option>
-                            <option value="7">Plant</option>
                         </select>
                     </div>
                 </div>
@@ -146,6 +142,53 @@
     </div>
 
     <div class="container mt-5">
+        <div class="row">
+            <div class="col d-none d-lg-block">
+                <div class="card rounded border border-3">
+                    <div class="card-header step-header text-white bg-dark step2">
+                        STEP2 - Choose the fomular！
+                    </div>
+                </div>
+            </div>
+            <div class="col d-lg-none">
+                <div class="rounded border border-3 p-3">
+                    <h4 class="text-center">Hench MixTree</h4>
+                    <div class="text-center mt-3 mb-2">
+                        <button id="collapse" type="button" class="btn btn-sm btn-dark" onclick="collapse();">Collapse</button>
+                        <button id="expand" type="button" class="btn btn-sm btn-dark" onclick="expand();">Expand</button>
+                        <a type="button" class="btn btn-sm btn-success export-text" style="width: 110px;">Save</a>
+                        
+                        <div class="overflow-scroll">
+                            <table id="hench-count" class="table border table-bordered table-hover text-center align-middle table-ssm mb-0"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="hench-panel" class="card-body">
+                    <div class="position-relative">
+                        <div id="tree">
+                            <svg width="100%" height="700" style="background-color: gainsboro;"></svg>
+                        </div>
+                        <div id="fomular-panel" class="position-absolute bg-light rounded d-none">
+                            <div class="bg-primary rounded-top py-1 text-center">
+                                <button id="close-fomular-panel" class="btn-close btn-close-white position-absolute" aria-label="Close" style="right: 12px;"></button>
+                                <span id="fomular-title"></span>
+                            </div>
+                            <div id="fomular-body" class="px-4 py-2"></div>
+                        </div>
+                        <button id="collapse" type="button" class="btn btn-dark position-absolute d-none d-lg-block" onclick="collapse();">Collapse</button>
+                        <button id="expand" type="button" class="btn btn-dark position-absolute d-none d-lg-block" onclick="expand();">Expand</button>
+                        <span id="mixlevel-counter" class="position-absolute d-none d-lg-block"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 d-none">
         <div class="row d-none d-lg-block">
             <div class="col">
                 <div class="card rounded border border-3">
@@ -183,25 +226,25 @@
             <div class="col">
                 <div class="rounded border border-3 p-3">
                     <h4 class="text-center">Hench MixTree</h4>
-                    <div id="hench-panel" class="card-body">
+                    <div id="hench-panelas" class="card-body">
                         <div class="text-center mt-3 mb-2">
                             <button id="collapse" type="button" class="btn btn-sm btn-dark" onclick="collapse();">Collapse</button>
                             <button id="expand" type="button" class="btn btn-sm btn-dark" onclick="expand();">Expand</button>
                             <button id="expand" type="button" class="btn btn-sm btn-success" onclick="expand();">Save</button>
                             <div class="overflow-scroll">
-                                <table id="hench-count" class="table border table-bordered table-hover text-center align-middle table-ssm mb-0"></table>
+                                <table id="hench-counts" class="table border table-bordered table-hover text-center align-middle table-ssm mb-0"></table>
                             </div>
                         </div>
                         <div class="position-relative">
                             <div id="tree">
                                 <svg width="100%" height="500" style="background-color: gainsboro;"></svg>
                             </div>
-                            <div id="fomular-panel" class="position-absolute bg-light rounded d-none">
+                            <div id="fomular-panels" class="position-absolute bg-light rounded d-none">
                                 <div class="bg-primary rounded-top py-1 text-center">
-                                    <button id="close-fomular-panel" class="btn-close btn-close-white position-absolute" aria-label="Close" style="right: 12px;"></button>
-                                    <span id="fomular-title"></span>
+                                    <button id="close-fomular-pasnel" class="btn-close btn-close-white position-absolute" aria-label="Close" style="right: 12px;"></button>
+                                    <span id="fomular-titlse"></span>
                                 </div>
-                                <div id="fomular-body" class="px-4 py-2"></div>
+                                <div id="fomular-bsody" class="px-4 py-2"></div>
                             </div>
                         </div>
                     </div>
@@ -209,17 +252,22 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid d-none pt-1" style="background-color: whitesmoke;">
-        <div class="card rounded m-5 border border-3">
-            <div class="card-header step-header text-white bg-primary">
-                STEP3 - Download the MixTree！
-            </div>
-            <div class="card-body">
-                <div class="row position-relative">
-                    <div class="col mx-auto" style="overflow: hidden;">
-                        <img src="img/download.jpg" class="download-card" alt="download image">
+
+    <div class="container mt-5 d-none d-lg-block bg-light">
+        <div class="row">
+            <div class="col">
+                <div class="card rounded border border-3">
+                    <div class="card-header step-header text-white bg-primary">
+                        STEP3 - Download the MixTree！
                     </div>
-                    <a id="export-text" class="download-btn position-absolute my-auto rounded-3 border border-5 text-center text-decoration-none"></a>
+                    <div class="card-body">
+                        <div class="row position-relative">
+                            <div class="col mx-auto" style="overflow: hidden;">
+                                <img src="img/download.jpg" class="download-card" alt="download image">
+                            </div>
+                            <a id="export-text" class="download-btn position-absolute my-auto rounded-3 border border-5 text-center text-decoration-none export-text"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -227,6 +275,6 @@
 </body>
 <div w3-include-html="footer.html" class="mt-5"></div>
 
-<script src="js/mixtree.js"></script>
+<script src="js/mixtree2.js"></script>
 <script>includeHTML();</script>
 </html>
