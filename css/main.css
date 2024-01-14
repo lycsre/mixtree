@@ -131,10 +131,6 @@ footer {
     opacity: 1;
 }
 
-.carousel .carousel-item img {
-    height: 600px;
-}
-
 circle:focus {
     outline: none;
 }
