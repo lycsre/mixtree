@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,19 +8,15 @@
     <meta property="og:title" content="MixTree">
     <meta property="og:description" content="Mix formula visualization tool.">
     <meta property="og:image" content="img/og.jpg">
-    <title>MixTree</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1789969836469589"
-     crossorigin="anonymous"></script>
+    <title>MixTree | Material</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1789969836469589" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
     <link rel="icon" href="img/mixtree.png">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PFZ3Z4KT2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -65,101 +60,115 @@
 
 <div w3-include-html="nav.html" class="mb-5"></div>
 <body>
-    <div class="container d-none d-lg-block">
-        <div class="row my-5">
-            <h2 class="text-center mb-5">Production Material</h2>
-            <table id="production-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
-                <thead class="bg-dark text-white m-auto pb-5" style="height: 60px;">
-                    <tr>
-                        <th class="align-middle" scope="col" style="width: 40px;">#</th>
-                        <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
-                        <th class="align-middle" scope="col" style="width: 200px;">Item</th>
-                        <th class="align-middle" scope="col">Maps</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-danger text-center" role="alert">
+                    <h5 class="mb-0">Mobile version testing in progress ...</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center mb-4">Production Material</h2>
+                <table id="production-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
+                    <thead class="bg-dark text-white" style="height: 60px;">
+                        <tr>
+                            <th class="align-middle" scope="col" style="width: 40px;">#</th>
+                            <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
+                            <th class="align-middle" scope="col" style="width: 100px;">Item</th>
+                            <th class="align-middle" scope="col">Maps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div class="row my-5">
-            <h2 class="text-center mb-5">Daily Quest Material</h2>
-            <table id="daily-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
-                <thead class="bg-dark text-white m-auto pb-5" style="height: 60px;">
-                    <tr>
-                        <th class="align-middle" scope="col" style="width: 40px;">#</th>
-                        <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
-                        <th class="align-middle" scope="col" style="width: 200px;">Item</th>
-                        <th class="align-middle" scope="col">Maps</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <div class="col">
+                <h2 class="text-center mb-4">Daily Quest Material</h2>
+                <table id="daily-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
+                    <thead class="bg-dark text-white" style="height: 60px;">
+                        <tr>
+                            <th class="align-middle" scope="col" style="width: 40px;">#</th>
+                            <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
+                            <th class="align-middle" scope="col" style="width: 100px;">Item</th>
+                            <th class="align-middle" scope="col">Maps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div class="row my-5">
-            <h2 class="text-center mb-5">Synergy Material</h2>
-            <table id="synergy-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
-                <thead class="bg-dark text-white m-auto pb-5" style="height: 60px;">
-                    <tr>
-                        <th class="align-middle" scope="col" style="width: 40px;">#</th>
-                        <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
-                        <th class="align-middle" scope="col" style="width: 200px;">Item</th>
-                        <th class="align-middle" scope="col">Maps</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <div class="col">
+                <h2 class="text-center mb-4">Synergy Material</h2>
+                <table id="synergy-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
+                    <thead class="bg-dark text-white" style="height: 60px;">
+                        <tr>
+                            <th class="align-middle" scope="col" style="width: 40px;">#</th>
+                            <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
+                            <th class="align-middle" scope="col" style="width: 100px;">Item</th>
+                            <th class="align-middle" scope="col">Maps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div class="row my-5">
-            <h2 class="text-center mb-5">Jewelry Material</h2>
-            <table id="jewelry-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
-                <thead class="bg-dark text-white m-auto pb-5" style="height: 60px;">
-                    <tr>
-                        <th class="align-middle" scope="col" style="width: 40px;">#</th>
-                        <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
-                        <th class="align-middle" scope="col" style="width: 200px;">Item</th>
-                        <th class="align-middle" scope="col">Maps</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <div class="col">
+                <h2 class="text-center mb-4">Synergy Material</h2>
+                <table id="jewelry-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
+                    <thead class="bg-dark text-white" style="height: 60px;">
+                        <tr>
+                            <th class="align-middle" scope="col" style="width: 40px;">#</th>
+                            <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
+                            <th class="align-middle" scope="col" style="width: 100px;">Item</th>
+                            <th class="align-middle" scope="col">Maps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div class="row my-5">
-            <h2 class="text-center mb-5">Book Material</h2>
-            <table id="book-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
-                <thead class="bg-dark text-white m-auto pb-5" style="height: 60px;">
-                    <tr>
-                        <th class="align-middle" scope="col" style="width: 40px;">#</th>
-                        <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
-                        <th class="align-middle" scope="col" style="width: 200px;">Item</th>
-                        <th class="align-middle" scope="col">Maps</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <div class="col">
+                <h2 class="text-center mb-4">Book Material</h2>
+                <table id="book-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
+                    <thead class="bg-dark text-white" style="height: 60px;">
+                        <tr>
+                            <th class="align-middle" scope="col" style="width: 40px;">#</th>
+                            <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
+                            <th class="align-middle" scope="col" style="width: 100px;">Item</th>
+                            <th class="align-middle" scope="col">Maps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div class="row my-5">
-            <h2 class="text-center mb-5">Master Valor's Quest Material</h2>
-            <table id="valor-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
-                <thead class="bg-dark text-white m-auto pb-5" style="height: 60px;">
-                    <tr>
-                        <th class="align-middle" scope="col" style="width: 40px;">#</th>
-                        <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
-                        <th class="align-middle" scope="col" style="width: 200px;">Item</th>
-                        <th class="align-middle" scope="col">Maps</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="container-fluid bg-light p-3 d-block d-lg-none">
-        <div class="text-white bg-dark text-center d-flex justify-content-center flex-column" style="height: 350px;">
-            <h1>Mobile version coming soon.</h1>
+            <div class="col">
+                <h2 class="text-center mb-4">Master Valor's Quest Material</h2>
+                <table id="valor-table" class="table table-bordered text-center table-hover border border-2 p-0" style="table-layout: fixed;">
+                    <thead class="bg-dark text-white" style="height: 60px;">
+                        <tr>
+                            <th class="align-middle" scope="col" style="width: 40px;">#</th>
+                            <th class="align-middle" scope="col" style="width: 60px;">Icon</th>
+                            <th class="align-middle" scope="col" style="width: 100px;">Item</th>
+                            <th class="align-middle" scope="col">Maps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
