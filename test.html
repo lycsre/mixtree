@@ -61,213 +61,129 @@
 <div w3-include-html="nav.html" class="mb-5"></div>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col">
-                <div class="alert alert-danger text-center" role="alert">
-                    <h5 class="mb-0">Mobile version testing in progress ...</h5>
-                </div>
-            </div>
-        </div>
-        <div class="row d-none d-lg-block">
-            <div class="col">
-                <div class="card rounded border border-3">
-                    <div class="card-header step-header text-white card-primary">
-                        STEP1 - Choose the hench you want to mix！
-                    </div>
-                    <div id="hench-panel" class="card-body bg-light">
-                        <div class="row justify-content-center text-center mt-4">
-                            <div class="col-1 select-type btn active" data-type="0" role="button">
-                                <img src="img/type0.gif" width="50" height="50" alt="Dragon">
-                                <h5 class="my-1">Dragon</h5>
-                            </div>
-                            <div class="col-1 select-type btn" data-type="1" role="button">
-                                <img src="img/type1.gif" width="50" height="50" alt="Animal">
-                                <h5 class="my-1">Animal</h5>
-                            </div>
-                            <div class="col-1 select-type btn" data-type="2" role="button">
-                                <img src="img/type2.gif" width="50" height="50" alt="Insect">
-                                <h5 class="my-1">Insect</h5>
-                            </div>
-                            <div class="col-1 select-type btn" data-type="3" role="button">
-                                <img src="img/type3.gif" width="50" height="50" alt="Metal">
-                                <h5 class="my-1">Metal</h5>
-                            </div>
-                            <div class="col-1 select-type btn" data-type="4" role="button">
-                                <img src="img/type4.gif" width="50" height="50" alt="Mystery">
-                                <h5 class="my-1">Mystery</h5>
-                            </div>
-                            <div class="col-1 select-type btn" data-type="5" role="button">
-                                <img src="img/type5.gif" width="50" height="50" alt="Devil">
-                                <h5 class="my-1">Devil</h5>
-                            </div>
-                            <div class="col-1 select-type btn" data-type="6" role="button">
-                                <img src="img/type6.gif" width="50" height="50" alt="Bird">
-                                <h5 class="my-1">Bird</h5>
-                            </div>
-                            <div class="col-1 select-type btn" data-type="7" role="button">
-                                <img src="img/type7.gif" width="50" height="50" alt="Plant">
-                                <h5 class="my-1">Plant</h5>
-                            </div>
-                        </div>
-                        <div class="border-bottom border-5 mt-4 mx-auto" style="width: 90%;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row d-lg-none">
-            <div class="col">
-                <div class="rounded border border-3 p-3">
-                    <h4 class="text-center">Hench Selector</h4>
-                    <div class="input-group mt-3">
-                        <label class="input-group-text" for="henchTypeSelector">Type</label>
-                        <select class="form-select" id="henchTypeSelector">
-                            <option value="0" selected>Dragon</option>
-                            <option value="1">Animal</option>
-                            <option value="2">Insect</option>
-                            <option value="3">Metal</option>
-                            <option value="4">Mystery</option>
-                            <option value="5">Devil</option>
-                            <option value="6">Bird</option>
-                            <option value="7">Plant</option>
-                        </select>
-                    </div>
-                    <div class="input-group mt-2">
-                        <label class="input-group-text" for="henchNameSelector">Name</label>
-                        <select class="form-select" id="henchNameSelector">
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col d-none d-lg-block">
-                <div class="card rounded border border-3">
-                    <div class="card-header step-header text-white bg-dark step2">
-                        STEP2 - Choose the fomular！
-                    </div>
-                </div>
-            </div>
-            <div class="col d-lg-none">
-                <div class="rounded border border-3 p-3">
-                    <h4 class="text-center">Hench MixTree</h4>
-                    <div class="text-center mt-3 mb-2">
-                        <button id="collapse" type="button" class="btn btn-sm btn-dark" onclick="collapse();">Collapse</button>
-                        <button id="expand" type="button" class="btn btn-sm btn-dark" onclick="expand();">Expand</button>
-                        <a type="button" class="btn btn-sm btn-success export-text" style="width: 110px;">Save</a>
-                        
-                        <div class="overflow-scroll">
-                            <table id="hench-count" class="table border table-bordered table-hover text-center align-middle table-ssm mb-0"></table>
-                        </div>
-                    </div>
+                <div>
+                    <h1 class="text-center">Sponsor</h1>
+                    <p>
+                        <p>Dear Sponsors,</p>
+                        <p>Thank you for supporting MixTree. Your generosity enables us to fulfill our mission of providing more practical strategies. We deeply appreciate your contribution to making our vision a reality.</p>
+                        <p>If you are interested in becoming a sponsor, we welcome your support. Please contact us to explore sponsorship opportunities and join us in making a positive impact.</p>
+                        <p>Best Regards,</p>
+                        <p>Yu-Chia<br>
+                            
+                    </p>
+                    <hr>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <div id="hench-panel" class="card-body">
-                    <div class="position-relative">
-                        <div id="tree">
-                            <svg width="100%" height="700" style="background-color: gainsboro;"></svg>
-                        </div>
-                        <div id="fomular-panel" class="position-absolute bg-light rounded d-none">
-                            <div class="bg-primary rounded-top py-1 text-center">
-                                <button id="close-fomular-panel" class="btn-close btn-close-white position-absolute" aria-label="Close" style="right: 12px;"></button>
-                                <span id="fomular-title"></span>
-                            </div>
-                            <div id="fomular-body" class="px-4 py-2"></div>
-                        </div>
-                        <button id="collapse" type="button" class="btn btn-dark position-absolute d-none d-lg-block" onclick="collapse();">Collapse</button>
-                        <button id="expand" type="button" class="btn btn-dark position-absolute d-none d-lg-block" onclick="expand();">Expand</button>
-                        <span id="mixlevel-counter" class="position-absolute d-none d-lg-block"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-5 d-none">
-        <div class="row d-none d-lg-block">
-            <div class="col">
-                <div class="card rounded border border-3">
-                    <div class="card-header step-header text-white bg-dark step2">
-                        STEP2 - Choose the fomular！
-                    </div>
-                    <div id="hench-panel" class="card-body pt-0 bg-light">
-                        <div class="row my-3">
-                            <div class="col-12">
-                                <div class="overflow-scroll">
-                                    <table id="hench-count" class="table border table-bordered table-hover text-center align-middle table-ssm mb-0"></table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="position-relative">
-                            <div id="tree">
-                                <svg width="100%" height="700" style="background-color: gainsboro;"></svg>
-                            </div>
-                            <div id="fomular-panel" class="position-absolute bg-light rounded d-none">
-                                <div class="bg-primary rounded-top py-1 text-center">
-                                    <button id="close-fomular-panel" class="btn-close btn-close-white position-absolute" aria-label="Close" style="right: 12px;"></button>
-                                    <span id="fomular-title"></span>
-                                </div>
-                                <div id="fomular-body" class="px-4 py-2"></div>
-                            </div>
-                            <button id="collapse" type="button" class="btn btn-dark position-absolute" onclick="collapse();">Collapse</button>
-                            <button id="expand" type="button" class="btn btn-dark position-absolute" onclick="expand();">Expand</button>
-                            <span id="mixlevel-counter" class="position-absolute"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row d-lg-none">
-            <div class="col">
-                <div class="rounded border border-3 p-3">
-                    <h4 class="text-center">Hench MixTree</h4>
-                    <div id="hench-panelas" class="card-body">
-                        <div class="text-center mt-3 mb-2">
-                            <button id="collapse" type="button" class="btn btn-sm btn-dark" onclick="collapse();">Collapse</button>
-                            <button id="expand" type="button" class="btn btn-sm btn-dark" onclick="expand();">Expand</button>
-                            <button id="expand" type="button" class="btn btn-sm btn-success" onclick="expand();">Save</button>
-                            <div class="overflow-scroll">
-                                <table id="hench-counts" class="table border table-bordered table-hover text-center align-middle table-ssm mb-0"></table>
-                            </div>
-                        </div>
-                        <div class="position-relative">
-                            <div id="tree">
-                                <svg width="100%" height="500" style="background-color: gainsboro;"></svg>
-                            </div>
-                            <div id="fomular-panels" class="position-absolute bg-light rounded d-none">
-                                <div class="bg-primary rounded-top py-1 text-center">
-                                    <button id="close-fomular-pasnel" class="btn-close btn-close-white position-absolute" aria-label="Close" style="right: 12px;"></button>
-                                    <span id="fomular-titlse"></span>
-                                </div>
-                                <div id="fomular-bsody" class="px-4 py-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-5 d-none d-lg-block bg-light">
-        <div class="row">
-            <div class="col">
-                <div class="card rounded border border-3">
-                    <div class="card-header step-header text-white bg-primary">
-                        STEP3 - Download the MixTree！
-                    </div>
+            <div class="col-md-6 col-lg-4 p-3">
+                <div class="card">
+                    <img src="img/layer100.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <div class="row position-relative">
-                            <div class="col mx-auto" style="overflow: hidden;">
-                                <img src="img/download.jpg" class="download-card" alt="download image">
-                            </div>
-                            <a id="export-text" class="download-btn position-absolute my-auto rounded-3 border border-5 text-center text-decoration-none export-text"></a>
-                        </div>
-                    </div>
+                        <h5 class="card-title">Yu-Chia</h5>
+                        <p class="card-text">Say something ...</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Donate Items</span>:
+                            <ul>
+                                <li>Pink Cloud * 10</li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><span class="fw-bold">Donate Date</span>: 2023-01-01</li>
+                      </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 p-3">
+                <div class="card">
+                    <img src="img/layer100.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Yu-Chia</h5>
+                        <p class="card-text">Say something ...</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Donate Items</span>:
+                            <ul>
+                                <li>Pink Cloud * 10</li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><span class="fw-bold">Donate Date</span>: 2023-01-01</li>
+                      </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 p-3">
+                <div class="card">
+                    <img src="img/layer100.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Yu-Chia</h5>
+                        <p class="card-text">Say something ...</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Donate Items</span>:
+                            <ul>
+                                <li>Pink Cloud * 10</li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><span class="fw-bold">Donate Date</span>: 2023-01-01</li>
+                      </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 p-3">
+                <div class="card">
+                    <img src="img/layer100.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Yu-Chia</h5>
+                        <p class="card-text">Say something ...</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Donate Items</span>:
+                            <ul>
+                                <li>Pink Cloud * 10</li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><span class="fw-bold">Donate Date</span>: 2023-01-01</li>
+                      </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 p-3">
+                <div class="card">
+                    <img src="img/layer100.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Yu-Chia</h5>
+                        <p class="card-text">Say something ...</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Donate Items</span>:
+                            <ul>
+                                <li>Pink Cloud * 10</li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><span class="fw-bold">Donate Date</span>: 2023-01-01</li>
+                      </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 p-3">
+                <div class="card">
+                    <img src="img/layer100.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Yu-Chia</h5>
+                        <p class="card-text">Say something ...</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Donate Items</span>:
+                            <ul>
+                                <li>Pink Cloud * 10</li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><span class="fw-bold">Donate Date</span>: 2023-01-01</li>
+                      </ul>
                 </div>
             </div>
         </div>
