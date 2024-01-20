@@ -157,11 +157,14 @@
                         <button id="collapse" type="button" class="btn btn-sm btn-dark" onclick="collapse();">Collapse</button>
                         <button id="expand" type="button" class="btn btn-sm btn-dark" onclick="expand();">Expand</button>
                         <a type="button" class="btn btn-sm btn-success export-text" style="width: 110px;">Save</a>
-                        
-                        <div class="overflow-scroll">
-                            <table id="hench-count" class="table border table-bordered table-hover text-center align-middle table-ssm mb-0"></table>
-                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="border border-1 overflow-scroll">
+                    <table class="table border table-bordered table-hover text-center align-middle mb-0 hench-count"></table>
                 </div>
             </div>
         </div>
@@ -182,71 +185,6 @@
                         <button id="collapse" type="button" class="btn btn-dark position-absolute d-none d-lg-block" onclick="collapse();">Collapse</button>
                         <button id="expand" type="button" class="btn btn-dark position-absolute d-none d-lg-block" onclick="expand();">Expand</button>
                         <span id="mixlevel-counter" class="position-absolute d-none d-lg-block"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-5 d-none">
-        <div class="row d-none d-lg-block">
-            <div class="col">
-                <div class="card rounded border border-3">
-                    <div class="card-header step-header text-white bg-dark step2">
-                        STEP2 - Choose the fomular！
-                    </div>
-                    <div id="hench-panel" class="card-body pt-0 bg-light">
-                        <div class="row my-3">
-                            <div class="col-12">
-                                <div class="overflow-scroll">
-                                    <table id="hench-count" class="table border table-bordered table-hover text-center align-middle table-ssm mb-0"></table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="position-relative">
-                            <div id="tree">
-                                <svg width="100%" height="700" style="background-color: gainsboro;"></svg>
-                            </div>
-                            <div id="fomular-panel" class="position-absolute bg-light rounded d-none">
-                                <div class="bg-primary rounded-top py-1 text-center">
-                                    <button id="close-fomular-panel" class="btn-close btn-close-white position-absolute" aria-label="Close" style="right: 12px;"></button>
-                                    <span id="fomular-title"></span>
-                                </div>
-                                <div id="fomular-body" class="px-4 py-2"></div>
-                            </div>
-                            <button id="collapse" type="button" class="btn btn-dark position-absolute" onclick="collapse();">Collapse</button>
-                            <button id="expand" type="button" class="btn btn-dark position-absolute" onclick="expand();">Expand</button>
-                            <span id="mixlevel-counter" class="position-absolute"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row d-lg-none">
-            <div class="col">
-                <div class="rounded border border-3 p-3">
-                    <h4 class="text-center">Hench MixTree</h4>
-                    <div id="hench-panelas" class="card-body">
-                        <div class="text-center mt-3 mb-2">
-                            <button id="collapse" type="button" class="btn btn-sm btn-dark" onclick="collapse();">Collapse</button>
-                            <button id="expand" type="button" class="btn btn-sm btn-dark" onclick="expand();">Expand</button>
-                            <button id="expand" type="button" class="btn btn-sm btn-success" onclick="expand();">Save</button>
-                            <div class="overflow-scroll">
-                                <table id="hench-counts" class="table border table-bordered table-hover text-center align-middle table-ssm mb-0"></table>
-                            </div>
-                        </div>
-                        <div class="position-relative">
-                            <div id="tree">
-                                <svg width="100%" height="500" style="background-color: gainsboro;"></svg>
-                            </div>
-                            <div id="fomular-panels" class="position-absolute bg-light rounded d-none">
-                                <div class="bg-primary rounded-top py-1 text-center">
-                                    <button id="close-fomular-pasnel" class="btn-close btn-close-white position-absolute" aria-label="Close" style="right: 12px;"></button>
-                                    <span id="fomular-titlse"></span>
-                                </div>
-                                <div id="fomular-bsody" class="px-4 py-2"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
