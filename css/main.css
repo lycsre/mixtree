@@ -137,20 +137,46 @@ circle:focus {
 
 ::placeholder {
     text-align: center;
- }
+}
 
- ::-webkit-input-placeholder {
+::-webkit-input-placeholder {
     text-align: center;
- }
+}
 
- :-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder { /* Firefox 18- */
     text-align: center;
- }
+}
 
- ::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder {  /* Firefox 19+ */
     text-align: center;
- }
+}
 
- :-ms-input-placeholder {
+:-ms-input-placeholder {
     text-align: center;
- }
+}
+
+/* Set */
+.set-card > .row {
+    min-height: 300px;
+}
+
+.boss-hench {
+    max-width: 128px;
+}
+
+.boss-item {
+    border-radius: 2px;
+    background-color: #7a0c78e5;
+    padding: 0.17rem;
+    height: 48px;
+    width: 48px;;
+}
+
+.boss-item-set {
+    border-radius: 4px;
+    border-radius: 2px;
+    background-color: #7a0c78e5;
+    padding: 0.17rem;
+    max-height: 96px;
+    min-width: 240px;
+}
