@@ -443,7 +443,7 @@ function update_statics() {
 
     $("#mixlevel-counter").html(`<span>Hench Count: ${root.leaves().length}</span><br><span>Mix Level (Lv.7 ~ Lv.10): ${mix_counter[0] || 0}/${mix_counter[1] || 0}/${mix_counter[2] || 0}/${mix_counter[3] || 0}</span>`);
 
-    $("#hench-count").html("");
+    $(".hench-count").html("");
     let id_td = "",
         icon_td = "",
         name_td = "",
@@ -455,7 +455,7 @@ function update_statics() {
         name_td = name_td + `<td class="align-middle px-4" scope="row"><span class="text-nowrap">Lv.${henches[sort_hehch_level[index][0]]["level"]}</span><br><span class="text-nowrap">${translate(henches[sort_hehch_level[index][0]]["name"])}</span></td>`
         count_td = count_td + `<td class="align-middle">${hench_counter[sort_hehch_level[index][0]]}</td>`
     }
-    $("#hench-count").append(`
+    $(".hench-count").append(`
         <thead class="table-dark"><tr><td class="align-middle">#</td>${id_td}</tr></thead>
         <tr><td class="align-middle text-bg-warning">Icon</td>${icon_td}</tr>
         <tr><td class="align-middle text-bg-warning px-3">Name</td>${translate(name_td)}</tr>
@@ -515,6 +515,28 @@ $(function() {
         $(`#tab${type}`).removeClass("d-none");
     });
 
+    // Mobile hench selector (type dropdown -> name dropdown -> generate_svg),
+    // mirrors the desktop type-tab/hench-card flow above for the d-lg-none layout.
+    function populateHenchNameSelector(type) {
+        let options = Object.values(henches)
+            .filter(hench => hench["type"] == type && hench["level"] > 120)
+            .sort((a, b) => a["level"] - b["level"])
+            .map(hench => `<option value="${hench["hid"]}">Lv.${hench["level"]} ${translate(hench["name"]).replaceAll("&nbsp;", " ")}</option>`)
+            .join("");
+        $("#henchNameSelector").html(options);
+    }
+
+    $("#henchTypeSelector").on("change", function() {
+        populateHenchNameSelector($(this).val());
+    });
+
+    $("#henchNameSelector").on("change", function() {
+        let hid = parseInt($(this).val());
+        if (hid) generate_svg(hid);
+    });
+
+    populateHenchNameSelector($("#henchTypeSelector").val());
+
     window.onscroll = function() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             $("#btn-back-to-top").css("display", "block");
@@ -523,7 +545,7 @@ $(function() {
         }
     };
 
-    $("#export-text").on("click", function() {
+    $(".export-text").on("click", function() {
         if (root && root.data.level) {
             let statics = get_statics(),
                 mix_counter = statics[0],
@@ -544,10 +566,10 @@ $(function() {
             content += `(Lv.${root.data.level})${translate(root.data.name).replaceAll("&nbsp;", " ")}\n${export_text(root, "")}`;
 
             window.URL = window.URL || window.webkitURL;
-            $("#export-text").attr("href", window.URL.createObjectURL(new Blob([content], {
+            $(".export-text").attr("href", window.URL.createObjectURL(new Blob([content], {
                 type: 'text/plain'
             })));
-            $("#export-text").attr("download", "MixTree.txt");
+            $(".export-text").attr("download", "MixTree.txt");
         };
     });
 
