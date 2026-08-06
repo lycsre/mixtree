@@ -3,13 +3,6 @@ body {
     background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
 }
 
-header {
-    background-image: url("img/header.png");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center top;
-}
-
 .node {
     cursor: pointer;
 }
